@@ -1,4 +1,4 @@
 export const api = axios.create({
   baseURL: 'https://opentdb.com/',
-  timeout: 4000
+  timeout: 10000
 })
