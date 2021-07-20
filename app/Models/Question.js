@@ -14,11 +14,11 @@ export default class Question {
   }
   get Template() {
     //choices.indexOf(c) == 0 ? 'primary' : choices.indexOf(c) == 1 ? 'secondary' : choices.indexOf(c) == 2 ? 'alert' : 'warning'
-    let template = `<h1 class="text-center mt-5">${this.question}</h1>
+    let template = `<h1 class="text-center text-secondary mt-5">${this.question}</h1>
     <div class="d-flex flex-column">
     `
     this.choices.forEach(c => {
-      template += `<button class="btn my-2 ${this.choices.indexOf(c) == 0 ? 'btn-primary' : this.choices.indexOf(c) == 1 ? 'btn-secondary' : this.choices.indexOf(c) == 2 ? 'btn-warning' : 'btn-warning'}" onclick="app.questionsController.checkAnswer('${c}')">${c}</button>`
+      template += `<button class="btn my-2 ${this.choices.indexOf(c) == 0 ? 'btn-primary' : this.choices.indexOf(c) == 1 ? 'btn-secondary' : this.choices.indexOf(c) == 2 ? 'btn-warning' : 'btn-danger'}" onclick="app.questionsController.checkAnswer('${c}')">${c}</button>`
     });
     template += `</div>
     `

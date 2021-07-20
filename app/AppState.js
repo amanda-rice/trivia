@@ -6,7 +6,7 @@ class AppState extends EventEmitter {
   /** @type {Value[]} */
   questions = []
   correct = 0
-  level = "easy"
+  level = 'easy'
 }
 
 export const ProxyState = new Proxy(new AppState(), {

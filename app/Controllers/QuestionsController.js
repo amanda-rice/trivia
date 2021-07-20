@@ -15,7 +15,6 @@ function _draw() {
 
 export default class QuestionsController {
   constructor() {
-    // REGISTER ALL LISTENERS
     ProxyState.on('questions', _draw)
     ProxyState.on('correct', saveState)
     ProxyState.on('level', saveState)
@@ -23,9 +22,6 @@ export default class QuestionsController {
     loadState()
     this.getQuestion()
     _draw()
-    // GET DATA FOR CONTROLLER
-    // this.getAll()
-    this.getQuestion()
   }
   async getQuestion() {
     try {

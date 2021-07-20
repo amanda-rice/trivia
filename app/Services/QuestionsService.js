@@ -14,13 +14,7 @@ class QuestionsService {
   async getQuestions() {
     let url = 'api.php?amount=1&difficulty=' + ProxyState.level
     console.log(url)
-    // NOTE any string passed into the request, is concat'ed on to the end of baseURL with an optional '/'
-    // ALL AXIOS REQUESTS RETURN A PROMISE  
-
     const res = await api.get(url)
-    // whenever you work with axios it wraps the response in an object, with the property 'data' being the response info
-
-    // itterate over the array of POJOs and turn them into Person
     let question = res.data.results.map(q => new Question(q))
     ProxyState.questions = question
   }
