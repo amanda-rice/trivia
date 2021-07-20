@@ -19,7 +19,9 @@ export default class QuestionsController {
     ProxyState.on('questions', _draw)
     ProxyState.on('correct', saveState)
     ProxyState.on('level', saveState)
+
     loadState()
+    this.getQuestion()
     _draw()
     // GET DATA FOR CONTROLLER
     // this.getAll()
